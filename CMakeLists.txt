@@ -17,8 +17,8 @@ include_directories(
 
 add_definitions(-DMODEL_PATH="${PROJECT_SOURCE_DIR}/model/model.xml")
 
-add_library(DigitalRecognition STATIC modelManager.cpp)
-target_link_libraries(DigitalRecognition openvino::runtime ${OpenCV_LIBRARIES})
+add_library(DigitalRecognitionLib STATIC modelManager.cpp)
+target_link_libraries(DigitalRecognitionLib openvino::runtime ${OpenCV_LIBRARIES})
 
 add_executable(benchmark benchmark.cpp)
-target_link_libraries(benchmark DigitalRecognition ${OpenCV_LIBRARIES})
+target_link_libraries(benchmark DigitalRecognitionLib ${OpenCV_LIBRARIES})
