@@ -1,6 +1,1 @@
-model/model.bin
-model/model.mapping
-model/model.xml
-*.bin
-*.mapping
 cmake-build-debug/*

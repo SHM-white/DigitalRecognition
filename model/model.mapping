@@ -1,0 +1,1211 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="input.1" output_port_id="input.1" />
+		<IR name="input.1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_875" output_port_id="onnx::Conv_875" />
+		<IR name="onnx::Conv_875" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/init_conv/init_conv.0/Conv" output_port_id="/init_conv/init_conv.0/Conv_output_0" />
+		<IR name="/init_conv/init_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/init_conv/init_conv.2/Add" output_port_id="/init_conv/init_conv.2/Add_output_0" />
+		<IR name="/init_conv/init_conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/init_conv/init_conv.2/Relu" output_port_id="/init_conv/init_conv.2/Relu_output_0" />
+		<IR name="/init_conv/init_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/init_conv/init_conv.2/Clip" output_port_id="/init_conv/init_conv.2/Clip_output_0" />
+		<IR name="/init_conv/init_conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/init_conv/init_conv.2/Div" output_port_id="/init_conv/init_conv.2/Div_output_0" />
+		<IR name="/init_conv/init_conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/init_conv/init_conv.2/Mul" output_port_id="/init_conv/init_conv.2/Mul_output_0" />
+		<IR name="/init_conv/init_conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_878" output_port_id="onnx::Conv_878" />
+		<IR name="onnx::Conv_878" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/conv/conv.0/Conv" output_port_id="/block/block.0/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.0/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/conv/conv.2/Relu" output_port_id="/block/block.0/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.0/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.0/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.0/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.0/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.0/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/AveragePool" output_port_id="/block/block.0/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.0/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/Constant_1" output_port_id="/block/block.0/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.0/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/Reshape" output_port_id="/block/block.0/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.0/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.0.squeeze_block.dense.0.weight" output_port_id="block.0.squeeze_block.dense.0.weight" />
+		<IR name="block.0.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.0/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.0/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.0/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.0/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.0.squeeze_block.dense.2.weight" output_port_id="block.0.squeeze_block.dense.2.weight" />
+		<IR name="block.0.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.0/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.0/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.0/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.0/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.0/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.0/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.0/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.0/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/Constant_2" output_port_id="/block/block.0/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.0/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/Reshape_1" output_port_id="/block/block.0/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.0/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/squeeze_block/Mul" output_port_id="/block/block.0/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.0/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_884" output_port_id="onnx::Conv_884" />
+		<IR name="onnx::Conv_884" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.0/point_conv/point_conv.0/Conv" output_port_id="/block/block.0/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.0/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.0/point_conv/point_conv.2/Relu" output_port_id="/block/block.0/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.0/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_887" output_port_id="onnx::Conv_887" />
+		<IR name="onnx::Conv_887" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.1/conv/conv.0/Conv" output_port_id="/block/block.1/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.1/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.1/conv/conv.2/Relu" output_port_id="/block/block.1/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.1/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.1/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.1/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.1/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_893" output_port_id="onnx::Conv_893" />
+		<IR name="onnx::Conv_893" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.1/point_conv/point_conv.0/Conv" output_port_id="/block/block.1/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.1/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.1/point_conv/point_conv.2/Relu" output_port_id="/block/block.1/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.1/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_896" output_port_id="onnx::Conv_896" />
+		<IR name="onnx::Conv_896" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.2/conv/conv.0/Conv" output_port_id="/block/block.2/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.2/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.2/conv/conv.2/Relu" output_port_id="/block/block.2/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.2/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.2/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.2/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.2/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_902" output_port_id="onnx::Conv_902" />
+		<IR name="onnx::Conv_902" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.2/point_conv/point_conv.0/Conv" output_port_id="/block/block.2/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.2/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.2/point_conv/point_conv.2/Relu" output_port_id="/block/block.2/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.2/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.2/Add" output_port_id="/block/block.2/Add_output_0" />
+		<IR name="/block/block.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_905" output_port_id="onnx::Conv_905" />
+		<IR name="onnx::Conv_905" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/conv/conv.0/Conv" output_port_id="/block/block.3/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.3/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/conv/conv.2/Relu" output_port_id="/block/block.3/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.3/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.3/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.3/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.3/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.3/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/AveragePool" output_port_id="/block/block.3/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.3/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/Constant_1" output_port_id="/block/block.3/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.3/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/Reshape" output_port_id="/block/block.3/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.3/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.3.squeeze_block.dense.0.weight" output_port_id="block.3.squeeze_block.dense.0.weight" />
+		<IR name="block.3.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.3/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.3/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.3/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.3/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.3.squeeze_block.dense.2.weight" output_port_id="block.3.squeeze_block.dense.2.weight" />
+		<IR name="block.3.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.3/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.3/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.3/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.3/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.3/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.3/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.3/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.3/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/Constant_2" output_port_id="/block/block.3/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.3/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/Reshape_1" output_port_id="/block/block.3/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.3/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/squeeze_block/Mul" output_port_id="/block/block.3/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.3/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_911" output_port_id="onnx::Conv_911" />
+		<IR name="onnx::Conv_911" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.3/point_conv/point_conv.0/Conv" output_port_id="/block/block.3/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.3/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.3/point_conv/point_conv.2/Relu" output_port_id="/block/block.3/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.3/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_914" output_port_id="onnx::Conv_914" />
+		<IR name="onnx::Conv_914" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/conv/conv.0/Conv" output_port_id="/block/block.4/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.4/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/conv/conv.2/Relu" output_port_id="/block/block.4/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.4/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.4/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.4/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.4/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.4/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/AveragePool" output_port_id="/block/block.4/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.4/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/Constant_1" output_port_id="/block/block.4/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.4/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/Reshape" output_port_id="/block/block.4/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.4/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.4.squeeze_block.dense.0.weight" output_port_id="block.4.squeeze_block.dense.0.weight" />
+		<IR name="block.4.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.4/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.4/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.4/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.4/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.4.squeeze_block.dense.2.weight" output_port_id="block.4.squeeze_block.dense.2.weight" />
+		<IR name="block.4.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.4/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.4/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.4/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.4/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.4/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.4/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.4/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.4/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/Constant_2" output_port_id="/block/block.4/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.4/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/Reshape_1" output_port_id="/block/block.4/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.4/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/squeeze_block/Mul" output_port_id="/block/block.4/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.4/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_920" output_port_id="onnx::Conv_920" />
+		<IR name="onnx::Conv_920" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/point_conv/point_conv.0/Conv" output_port_id="/block/block.4/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.4/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.4/point_conv/point_conv.2/Relu" output_port_id="/block/block.4/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.4/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.4/Add" output_port_id="/block/block.4/Add_output_0" />
+		<IR name="/block/block.4/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_923" output_port_id="onnx::Conv_923" />
+		<IR name="onnx::Conv_923" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/conv/conv.0/Conv" output_port_id="/block/block.5/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.5/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/conv/conv.2/Relu" output_port_id="/block/block.5/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.5/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.5/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.5/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.5/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.5/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/AveragePool" output_port_id="/block/block.5/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.5/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/Constant_1" output_port_id="/block/block.5/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.5/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/Reshape" output_port_id="/block/block.5/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.5/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.5.squeeze_block.dense.0.weight" output_port_id="block.5.squeeze_block.dense.0.weight" />
+		<IR name="block.5.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.5/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.5/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.5/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.5/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.5.squeeze_block.dense.2.weight" output_port_id="block.5.squeeze_block.dense.2.weight" />
+		<IR name="block.5.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.5/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.5/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.5/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.5/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.5/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.5/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.5/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.5/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/Constant_2" output_port_id="/block/block.5/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.5/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/Reshape_1" output_port_id="/block/block.5/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.5/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/squeeze_block/Mul" output_port_id="/block/block.5/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.5/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_929" output_port_id="onnx::Conv_929" />
+		<IR name="onnx::Conv_929" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/point_conv/point_conv.0/Conv" output_port_id="/block/block.5/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.5/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.5/point_conv/point_conv.2/Relu" output_port_id="/block/block.5/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.5/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.5/Add" output_port_id="/block/block.5/Add_output_0" />
+		<IR name="/block/block.5/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_932" output_port_id="onnx::Conv_932" />
+		<IR name="onnx::Conv_932" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/conv/conv.0/Conv" output_port_id="/block/block.6/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.6/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/conv/conv.2/Add" output_port_id="/block/block.6/conv/conv.2/Add_output_0" />
+		<IR name="/block/block.6/conv/conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/conv/conv.2/Relu" output_port_id="/block/block.6/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.6/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/conv/conv.2/Clip" output_port_id="/block/block.6/conv/conv.2/Clip_output_0" />
+		<IR name="/block/block.6/conv/conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/conv/conv.2/Div" output_port_id="/block/block.6/conv/conv.2/Div_output_0" />
+		<IR name="/block/block.6/conv/conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/conv/conv.2/Mul" output_port_id="/block/block.6/conv/conv.2/Mul_output_0" />
+		<IR name="/block/block.6/conv/conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.6/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.6/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.6/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.6/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/AveragePool" output_port_id="/block/block.6/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.6/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/Constant_1" output_port_id="/block/block.6/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.6/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/Reshape" output_port_id="/block/block.6/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.6/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.6.squeeze_block.dense.0.weight" output_port_id="block.6.squeeze_block.dense.0.weight" />
+		<IR name="block.6.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.6/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.6/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.6/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.6/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.6.squeeze_block.dense.2.weight" output_port_id="block.6.squeeze_block.dense.2.weight" />
+		<IR name="block.6.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.6/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.6/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.6/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.6/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.6/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.6/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.6/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.6/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/Constant_2" output_port_id="/block/block.6/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.6/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/Reshape_1" output_port_id="/block/block.6/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.6/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/squeeze_block/Mul" output_port_id="/block/block.6/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.6/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_938" output_port_id="onnx::Conv_938" />
+		<IR name="onnx::Conv_938" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/point_conv/point_conv.0/Conv" output_port_id="/block/block.6/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.6/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/point_conv/point_conv.2/Add" output_port_id="/block/block.6/point_conv/point_conv.2/Add_output_0" />
+		<IR name="/block/block.6/point_conv/point_conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/point_conv/point_conv.2/Relu" output_port_id="/block/block.6/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.6/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/point_conv/point_conv.2/Clip" output_port_id="/block/block.6/point_conv/point_conv.2/Clip_output_0" />
+		<IR name="/block/block.6/point_conv/point_conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.6/point_conv/point_conv.2/Div" output_port_id="/block/block.6/point_conv/point_conv.2/Div_output_0" />
+		<IR name="/block/block.6/point_conv/point_conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.6/point_conv/point_conv.2/Mul" output_port_id="/block/block.6/point_conv/point_conv.2/Mul_output_0" />
+		<IR name="/block/block.6/point_conv/point_conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_941" output_port_id="onnx::Conv_941" />
+		<IR name="onnx::Conv_941" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/conv/conv.0/Conv" output_port_id="/block/block.7/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.7/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/conv/conv.2/Add" output_port_id="/block/block.7/conv/conv.2/Add_output_0" />
+		<IR name="/block/block.7/conv/conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/conv/conv.2/Relu" output_port_id="/block/block.7/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.7/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/conv/conv.2/Clip" output_port_id="/block/block.7/conv/conv.2/Clip_output_0" />
+		<IR name="/block/block.7/conv/conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/conv/conv.2/Div" output_port_id="/block/block.7/conv/conv.2/Div_output_0" />
+		<IR name="/block/block.7/conv/conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/conv/conv.2/Mul" output_port_id="/block/block.7/conv/conv.2/Mul_output_0" />
+		<IR name="/block/block.7/conv/conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.7/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.7/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.7/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.7/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/AveragePool" output_port_id="/block/block.7/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.7/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/Constant_1" output_port_id="/block/block.7/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.7/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/Reshape" output_port_id="/block/block.7/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.7/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.7.squeeze_block.dense.0.weight" output_port_id="block.7.squeeze_block.dense.0.weight" />
+		<IR name="block.7.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.7/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.7/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.7/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.7/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.7.squeeze_block.dense.2.weight" output_port_id="block.7.squeeze_block.dense.2.weight" />
+		<IR name="block.7.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.7/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.7/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.7/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.7/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.7/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.7/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.7/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.7/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/Constant_2" output_port_id="/block/block.7/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.7/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/Reshape_1" output_port_id="/block/block.7/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.7/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/squeeze_block/Mul" output_port_id="/block/block.7/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.7/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_947" output_port_id="onnx::Conv_947" />
+		<IR name="onnx::Conv_947" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/point_conv/point_conv.0/Conv" output_port_id="/block/block.7/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.7/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/point_conv/point_conv.2/Add" output_port_id="/block/block.7/point_conv/point_conv.2/Add_output_0" />
+		<IR name="/block/block.7/point_conv/point_conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/point_conv/point_conv.2/Relu" output_port_id="/block/block.7/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.7/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/point_conv/point_conv.2/Clip" output_port_id="/block/block.7/point_conv/point_conv.2/Clip_output_0" />
+		<IR name="/block/block.7/point_conv/point_conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.7/point_conv/point_conv.2/Div" output_port_id="/block/block.7/point_conv/point_conv.2/Div_output_0" />
+		<IR name="/block/block.7/point_conv/point_conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/point_conv/point_conv.2/Mul" output_port_id="/block/block.7/point_conv/point_conv.2/Mul_output_0" />
+		<IR name="/block/block.7/point_conv/point_conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.7/Add" output_port_id="/block/block.7/Add_output_0" />
+		<IR name="/block/block.7/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_950" output_port_id="onnx::Conv_950" />
+		<IR name="onnx::Conv_950" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/conv/conv.0/Conv" output_port_id="/block/block.8/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.8/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/conv/conv.2/Add" output_port_id="/block/block.8/conv/conv.2/Add_output_0" />
+		<IR name="/block/block.8/conv/conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/conv/conv.2/Relu" output_port_id="/block/block.8/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.8/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/conv/conv.2/Clip" output_port_id="/block/block.8/conv/conv.2/Clip_output_0" />
+		<IR name="/block/block.8/conv/conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/conv/conv.2/Div" output_port_id="/block/block.8/conv/conv.2/Div_output_0" />
+		<IR name="/block/block.8/conv/conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/conv/conv.2/Mul" output_port_id="/block/block.8/conv/conv.2/Mul_output_0" />
+		<IR name="/block/block.8/conv/conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.8/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.8/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.8/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.8/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/AveragePool" output_port_id="/block/block.8/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.8/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/Constant_1" output_port_id="/block/block.8/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.8/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/Reshape" output_port_id="/block/block.8/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.8/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.8.squeeze_block.dense.0.weight" output_port_id="block.8.squeeze_block.dense.0.weight" />
+		<IR name="block.8.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.8/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.8/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.8/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.8/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.8.squeeze_block.dense.2.weight" output_port_id="block.8.squeeze_block.dense.2.weight" />
+		<IR name="block.8.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.8/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.8/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.8/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.8/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.8/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.8/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.8/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.8/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/Constant_2" output_port_id="/block/block.8/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.8/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/Reshape_1" output_port_id="/block/block.8/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.8/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/squeeze_block/Mul" output_port_id="/block/block.8/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.8/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_956" output_port_id="onnx::Conv_956" />
+		<IR name="onnx::Conv_956" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/point_conv/point_conv.0/Conv" output_port_id="/block/block.8/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.8/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/point_conv/point_conv.2/Add" output_port_id="/block/block.8/point_conv/point_conv.2/Add_output_0" />
+		<IR name="/block/block.8/point_conv/point_conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/point_conv/point_conv.2/Relu" output_port_id="/block/block.8/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.8/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/point_conv/point_conv.2/Clip" output_port_id="/block/block.8/point_conv/point_conv.2/Clip_output_0" />
+		<IR name="/block/block.8/point_conv/point_conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.8/point_conv/point_conv.2/Div" output_port_id="/block/block.8/point_conv/point_conv.2/Div_output_0" />
+		<IR name="/block/block.8/point_conv/point_conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.8/point_conv/point_conv.2/Mul" output_port_id="/block/block.8/point_conv/point_conv.2/Mul_output_0" />
+		<IR name="/block/block.8/point_conv/point_conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_959" output_port_id="onnx::Conv_959" />
+		<IR name="onnx::Conv_959" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/conv/conv.0/Conv" output_port_id="/block/block.9/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.9/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/conv/conv.2/Add" output_port_id="/block/block.9/conv/conv.2/Add_output_0" />
+		<IR name="/block/block.9/conv/conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/conv/conv.2/Relu" output_port_id="/block/block.9/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.9/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/conv/conv.2/Clip" output_port_id="/block/block.9/conv/conv.2/Clip_output_0" />
+		<IR name="/block/block.9/conv/conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/conv/conv.2/Div" output_port_id="/block/block.9/conv/conv.2/Div_output_0" />
+		<IR name="/block/block.9/conv/conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/conv/conv.2/Mul" output_port_id="/block/block.9/conv/conv.2/Mul_output_0" />
+		<IR name="/block/block.9/conv/conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.9/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.9/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.9/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.9/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/AveragePool" output_port_id="/block/block.9/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.9/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/Constant_1" output_port_id="/block/block.9/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.9/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/Reshape" output_port_id="/block/block.9/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.9/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.9.squeeze_block.dense.0.weight" output_port_id="block.9.squeeze_block.dense.0.weight" />
+		<IR name="block.9.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.9/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.9/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.9/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.9/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.9.squeeze_block.dense.2.weight" output_port_id="block.9.squeeze_block.dense.2.weight" />
+		<IR name="block.9.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.9/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.9/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.9/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.9/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.9/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.9/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.9/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.9/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/Constant_2" output_port_id="/block/block.9/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.9/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/Reshape_1" output_port_id="/block/block.9/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.9/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/squeeze_block/Mul" output_port_id="/block/block.9/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.9/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_965" output_port_id="onnx::Conv_965" />
+		<IR name="onnx::Conv_965" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/point_conv/point_conv.0/Conv" output_port_id="/block/block.9/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.9/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/point_conv/point_conv.2/Add" output_port_id="/block/block.9/point_conv/point_conv.2/Add_output_0" />
+		<IR name="/block/block.9/point_conv/point_conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/point_conv/point_conv.2/Relu" output_port_id="/block/block.9/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.9/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/point_conv/point_conv.2/Clip" output_port_id="/block/block.9/point_conv/point_conv.2/Clip_output_0" />
+		<IR name="/block/block.9/point_conv/point_conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.9/point_conv/point_conv.2/Div" output_port_id="/block/block.9/point_conv/point_conv.2/Div_output_0" />
+		<IR name="/block/block.9/point_conv/point_conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/point_conv/point_conv.2/Mul" output_port_id="/block/block.9/point_conv/point_conv.2/Mul_output_0" />
+		<IR name="/block/block.9/point_conv/point_conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.9/Add" output_port_id="/block/block.9/Add_output_0" />
+		<IR name="/block/block.9/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_968" output_port_id="onnx::Conv_968" />
+		<IR name="onnx::Conv_968" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/conv/conv.0/Conv" output_port_id="/block/block.10/conv/conv.0/Conv_output_0" />
+		<IR name="/block/block.10/conv/conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/conv/conv.2/Add" output_port_id="/block/block.10/conv/conv.2/Add_output_0" />
+		<IR name="/block/block.10/conv/conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/conv/conv.2/Relu" output_port_id="/block/block.10/conv/conv.2/Relu_output_0" />
+		<IR name="/block/block.10/conv/conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/conv/conv.2/Clip" output_port_id="/block/block.10/conv/conv.2/Clip_output_0" />
+		<IR name="/block/block.10/conv/conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/conv/conv.2/Div" output_port_id="/block/block.10/conv/conv.2/Div_output_0" />
+		<IR name="/block/block.10/conv/conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/conv/conv.2/Mul" output_port_id="/block/block.10/conv/conv.2/Mul_output_0" />
+		<IR name="/block/block.10/conv/conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.10/squeeze_block/Pad_output_0" />
+		<IR name="/block/block.10/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/depth_conv/depth_conv.0/Conv" output_port_id="/block/block.10/depth_conv/depth_conv.0/Conv_output_0" />
+		<IR name="/block/block.10/depth_conv/depth_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/AveragePool" output_port_id="/block/block.10/squeeze_block/AveragePool_output_0" />
+		<IR name="/block/block.10/squeeze_block/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/Constant_1" output_port_id="/block/block.10/squeeze_block/Constant_1_output_0" />
+		<IR name="/block/block.10/squeeze_block/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/Reshape" output_port_id="/block/block.10/squeeze_block/Reshape_output_0" />
+		<IR name="/block/block.10/squeeze_block/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="block.10.squeeze_block.dense.0.weight" output_port_id="block.10.squeeze_block.dense.0.weight" />
+		<IR name="block.10.squeeze_block.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/dense/dense.0/Gemm" output_port_id="/block/block.10/squeeze_block/dense/dense.0/Gemm_output_0" />
+		<IR name="/block/block.10/squeeze_block/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/dense/dense.1/Relu" output_port_id="/block/block.10/squeeze_block/dense/dense.1/Relu_output_0" />
+		<IR name="/block/block.10/squeeze_block/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="block.10.squeeze_block.dense.2.weight" output_port_id="block.10.squeeze_block.dense.2.weight" />
+		<IR name="block.10.squeeze_block.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/dense/dense.3/Add" output_port_id="/block/block.10/squeeze_block/dense/dense.3/Add_output_0" />
+		<IR name="/block/block.10/squeeze_block/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/dense/dense.3/Relu" output_port_id="/block/block.10/squeeze_block/dense/dense.3/Relu_output_0" />
+		<IR name="/block/block.10/squeeze_block/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/dense/dense.3/Clip" output_port_id="/block/block.10/squeeze_block/dense/dense.3/Clip_output_0" />
+		<IR name="/block/block.10/squeeze_block/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/dense/dense.3/Div" output_port_id="/block/block.10/squeeze_block/dense/dense.3/Div_output_0" />
+		<IR name="/block/block.10/squeeze_block/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/Constant_2" output_port_id="/block/block.10/squeeze_block/Constant_2_output_0" />
+		<IR name="/block/block.10/squeeze_block/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/Reshape_1" output_port_id="/block/block.10/squeeze_block/Reshape_1_output_0" />
+		<IR name="/block/block.10/squeeze_block/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/squeeze_block/Mul" output_port_id="/block/block.10/squeeze_block/Mul_output_0" />
+		<IR name="/block/block.10/squeeze_block/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_974" output_port_id="onnx::Conv_974" />
+		<IR name="onnx::Conv_974" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/point_conv/point_conv.0/Conv" output_port_id="/block/block.10/point_conv/point_conv.0/Conv_output_0" />
+		<IR name="/block/block.10/point_conv/point_conv.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/point_conv/point_conv.2/Add" output_port_id="/block/block.10/point_conv/point_conv.2/Add_output_0" />
+		<IR name="/block/block.10/point_conv/point_conv.2/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/point_conv/point_conv.2/Relu" output_port_id="/block/block.10/point_conv/point_conv.2/Relu_output_0" />
+		<IR name="/block/block.10/point_conv/point_conv.2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/point_conv/point_conv.2/Clip" output_port_id="/block/block.10/point_conv/point_conv.2/Clip_output_0" />
+		<IR name="/block/block.10/point_conv/point_conv.2/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/block/block.10/point_conv/point_conv.2/Div" output_port_id="/block/block.10/point_conv/point_conv.2/Div_output_0" />
+		<IR name="/block/block.10/point_conv/point_conv.2/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/point_conv/point_conv.2/Mul" output_port_id="/block/block.10/point_conv/point_conv.2/Mul_output_0" />
+		<IR name="/block/block.10/point_conv/point_conv.2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/block/block.10/Add" output_port_id="/block/block.10/Add_output_0" />
+		<IR name="/block/block.10/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="out_conv1.0.weight" output_port_id="out_conv1.0.weight" />
+		<IR name="out_conv1.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.0/Conv" output_port_id="/out_conv1/out_conv1.1/Pad_output_0" />
+		<IR name="/out_conv1/out_conv1.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.0/Conv" output_port_id="/out_conv1/out_conv1.0/Conv_output_0" />
+		<IR name="/out_conv1/out_conv1.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/AveragePool" output_port_id="/out_conv1/out_conv1.1/AveragePool_output_0" />
+		<IR name="/out_conv1/out_conv1.1/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/Constant_1" output_port_id="/out_conv1/out_conv1.1/Constant_1_output_0" />
+		<IR name="/out_conv1/out_conv1.1/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/Reshape" output_port_id="/out_conv1/out_conv1.1/Reshape_output_0" />
+		<IR name="/out_conv1/out_conv1.1/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="out_conv1.1.dense.0.weight" output_port_id="out_conv1.1.dense.0.weight" />
+		<IR name="out_conv1.1.dense.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/dense/dense.0/Gemm" output_port_id="/out_conv1/out_conv1.1/dense/dense.0/Gemm_output_0" />
+		<IR name="/out_conv1/out_conv1.1/dense/dense.0/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/dense/dense.1/Relu" output_port_id="/out_conv1/out_conv1.1/dense/dense.1/Relu_output_0" />
+		<IR name="/out_conv1/out_conv1.1/dense/dense.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="out_conv1.1.dense.2.weight" output_port_id="out_conv1.1.dense.2.weight" />
+		<IR name="out_conv1.1.dense.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/dense/dense.3/Add" output_port_id="/out_conv1/out_conv1.1/dense/dense.3/Add_output_0" />
+		<IR name="/out_conv1/out_conv1.1/dense/dense.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/dense/dense.3/Relu" output_port_id="/out_conv1/out_conv1.1/dense/dense.3/Relu_output_0" />
+		<IR name="/out_conv1/out_conv1.1/dense/dense.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/dense/dense.3/Clip" output_port_id="/out_conv1/out_conv1.1/dense/dense.3/Clip_output_0" />
+		<IR name="/out_conv1/out_conv1.1/dense/dense.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/dense/dense.3/Div" output_port_id="/out_conv1/out_conv1.1/dense/dense.3/Div_output_0" />
+		<IR name="/out_conv1/out_conv1.1/dense/dense.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/Constant_2" output_port_id="/out_conv1/out_conv1.1/Constant_2_output_0" />
+		<IR name="/out_conv1/out_conv1.1/Constant_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/Reshape_1" output_port_id="/out_conv1/out_conv1.1/Reshape_1_output_0" />
+		<IR name="/out_conv1/out_conv1.1/Reshape_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.1/Mul" output_port_id="/out_conv1/out_conv1.1/Mul_output_0" />
+		<IR name="/out_conv1/out_conv1.1/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.2/BatchNormalization" output_port_id="/out_conv1/out_conv1.2/BatchNormalization_output_0" />
+		<IR name="/out_conv1/out_conv1.2/BatchNormalization" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.3/Add" output_port_id="/out_conv1/out_conv1.3/Add_output_0" />
+		<IR name="/out_conv1/out_conv1.3/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.3/Relu" output_port_id="/out_conv1/out_conv1.3/Relu_output_0" />
+		<IR name="/out_conv1/out_conv1.3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.3/Clip" output_port_id="/out_conv1/out_conv1.3/Clip_output_0" />
+		<IR name="/out_conv1/out_conv1.3/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.3/Div" output_port_id="/out_conv1/out_conv1.3/Div_output_0" />
+		<IR name="/out_conv1/out_conv1.3/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.3/Mul" output_port_id="/Pad_output_0" />
+		<IR name="/out_conv1/out_conv1.3/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv1/out_conv1.3/Mul" output_port_id="/out_conv1/out_conv1.3/Mul_output_0" />
+		<IR name="/out_conv1/out_conv1.3/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/AveragePool" output_port_id="/AveragePool_output_0" />
+		<IR name="/AveragePool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="out_conv2.0.weight" output_port_id="out_conv2.0.weight" />
+		<IR name="out_conv2.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv2/out_conv2.0/Conv" output_port_id="/out_conv2/out_conv2.0/Conv_output_0" />
+		<IR name="/out_conv2/out_conv2.0/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv2/out_conv2.1/Add" output_port_id="/out_conv2/out_conv2.1/Add_output_0" />
+		<IR name="/out_conv2/out_conv2.1/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv2/out_conv2.1/Relu" output_port_id="/out_conv2/out_conv2.1/Relu_output_0" />
+		<IR name="/out_conv2/out_conv2.1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv2/out_conv2.1/Clip" output_port_id="/out_conv2/out_conv2.1/Clip_output_0" />
+		<IR name="/out_conv2/out_conv2.1/Clip" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv2/out_conv2.1/Div" output_port_id="/out_conv2/out_conv2.1/Div_output_0" />
+		<IR name="/out_conv2/out_conv2.1/Div" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/out_conv2/out_conv2.1/Mul" output_port_id="/out_conv2/out_conv2.1/Mul_output_0" />
+		<IR name="/out_conv2/out_conv2.1/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="out_conv2.3.weight" output_port_id="out_conv2.3.weight" />
+		<IR name="out_conv2.3.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/out_conv2/out_conv2.3/Conv" output_port_id="/out_conv2/out_conv2.3/Conv_output_0" />
+		<IR name="/out_conv2/out_conv2.3/Conv" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/Constant_1" output_port_id="/Constant_1_output_0" />
+		<IR name="/Constant_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="873" output_port_id="873" />
+		<IR name="873" output_port_id="2" />
+	</map>
+</mapping>
