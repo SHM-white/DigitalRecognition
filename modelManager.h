@@ -15,18 +15,33 @@ struct InferResult {
     float confidence;
 };
 
-namespace dr {
-    class _modelManager:public boost::noncopyable {
-    private:
-        ov::Core core;
-        ov::CompiledModel model;
+class InferResultAsync {
+private:
+    ov::InferRequest req;
+public:
+    InferResultAsync() = default;
+    InferResultAsync(const InferResultAsync& other) = default;
+    explicit InferResultAsync(ov::InferRequest&& _req);
+    InferResultAsync(InferResultAsync&& other) = default;
+    InferResultAsync& operator=(const InferResultAsync& other);
+    InferResult get();
+};
 
-    public:
-        void init();
-        InferResult infer_sync(cv::Mat& img);
-    };
-}
+class ModelManager: public boost::noncopyable {
+private:
+    friend class InferResultAsync;
 
-#define modelManager boost::serialization::singleton<dr::_modelManager>::get_mutable_instance()
+    ov::Core core;
+    ov::CompiledModel model;
+
+    ov::Tensor preprocess(cv::Mat& img);
+    static InferResult postprocess(const ov::Tensor& res);
+
+public:
+    void init();
+    InferResult infer_sync(cv::Mat& img);
+    InferResultAsync infer_async(cv::Mat& img);
+};
+
 
 #endif //DIGITALRECOGNITION_MODELMANAGER_H

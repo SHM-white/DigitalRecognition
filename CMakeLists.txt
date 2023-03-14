@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(DigitalRecognition)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 set(OpenVINO_DIR /opt/intel/openvino/runtime/cmake)
 find_package(OpenVINO REQUIRED)
