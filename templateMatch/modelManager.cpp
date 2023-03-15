@@ -21,12 +21,11 @@ void ModelManager::init() {
 
 InferResult ModelManager::infer_sync(cv::Mat &img) {
     float lgt = 33.33333333333f;
-    cv::Mat img_mean;
     if (img.channels() > 1) {
         cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);
     }
     cv::Mat img_res(img.rows, img.cols, CV_8UC1, cv::Scalar(0));
-    img_mean = img(cv::Rect(img.cols / 4.0, 0, img.cols * 1.0 / 2.0, img.rows));//remove LEDs
+    cv::Mat img_mean = img(cv::Rect((int)(img.cols / 4.0), 0, (int)(img.cols / 2.0), img.rows));//remove LEDs
     cv::Mat img_gray = img * lgt / cv::mean(img_mean)[0];
     double r_max;
     double r_min;

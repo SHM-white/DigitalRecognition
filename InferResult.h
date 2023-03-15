@@ -27,8 +27,8 @@ private:
     std::shared_future<InferResult> req;
 #endif
     using T = decltype(req);
-    InferResult result;
-    bool callable = false, called = false;
+    InferResult result{};
+    bool callable = false, called = true, set = false;
 public:
     InferResultAsync() = default;
     InferResultAsync(const InferResultAsync& other) = default;
@@ -37,6 +37,7 @@ public:
     InferResultAsync& operator=(const InferResultAsync& other);
     InferResult get();
     InferResult operator()();
+    void setMarkerType(bool type);
 };
 
 
