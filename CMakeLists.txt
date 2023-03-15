@@ -3,7 +3,7 @@ project(DigitalRecognition)
 
 set(CMAKE_CXX_STANDARD 14)
 # 目前支持的识别方法：MobileNet, BP, Template
-set(RECOGNITION_METHOD "BP")
+set(RECOGNITION_METHOD "Template")
 set(BENCHMARK off)
 
 
