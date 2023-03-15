@@ -4,6 +4,9 @@ project(DigitalRecognition)
 set(CMAKE_CXX_STANDARD 14)
 # 目前支持的识别方法：MobileNet, BP, Template
 set(RECOGNITION_METHOD "BP")
+set(BENCHMARK off)
+
+
 if(${RECOGNITION_METHOD} MATCHES "MobileNet")
     message(STATUS "Using RECOGNITION METHOD MobileNet")
     add_definitions(-DMODEL_PATH="${PROJECT_SOURCE_DIR}/model/mobileNet.xml")
@@ -50,5 +53,7 @@ include_directories(
 add_library(DigitalRecognitionLib STATIC ${SOURCE_FILES} InferResult.cpp)
 target_link_libraries(DigitalRecognitionLib ${LINK_LIBRARIES} ${OpenCV_LIBRARIES})
 
-add_executable(benchmark benchmark.cpp)
-target_link_libraries(benchmark DigitalRecognitionLib ${OpenCV_LIBRARIES})
+if(BENCHMARK)
+    add_executable(benchmark benchmark.cpp)
+    target_link_libraries(benchmark DigitalRecognitionLib ${OpenCV_LIBRARIES})
+endif()
