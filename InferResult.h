@@ -27,14 +27,16 @@ private:
     std::shared_future<InferResult> req;
 #endif
     using T = decltype(req);
+    InferResult result;
+    bool callable = false, called = false;
 public:
     InferResultAsync() = default;
     InferResultAsync(const InferResultAsync& other) = default;
     InferResultAsync(InferResultAsync&& other) = default;
+    explicit InferResultAsync(T&& _req);
     InferResultAsync& operator=(const InferResultAsync& other);
     InferResult get();
-
-    explicit InferResultAsync(T&& _req);
+    InferResult operator()();
 };
 
 
