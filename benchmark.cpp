@@ -7,8 +7,7 @@
 #include <chrono>
 
 #include <opencv2/opencv.hpp>
-
-#include "modelManager.h"
+#include "infer.h"
 
 #define ANKERL_NANOBENCH_IMPLEMENT
 #include "nanobench.h"
@@ -36,11 +35,11 @@ int main() {
     InferResult res{};
 
     auto bench = ankerl::nanobench::Bench().minEpochIterations(100).timeUnit(1us, "us").warmup(20);
-    bench.run("OpenVINO Sync", [&res, &img] {
+    bench.run("Sync", [&res, &img] {
         res = modelManager.infer_sync(img);
     });
     for (int i = 1; i < 6; i++) {
-        bench.run(std::string("OpenVINO Async batch ") + std::to_string(i), asyncFunctionCreator(i, img));
+        bench.run(std::string("Async batch ") + std::to_string(i), asyncFunctionCreator(i, img));
     }
 
     std::cout << "Id: " << res.id << std::endl << "Confidence: " << res.confidence << std::endl;
