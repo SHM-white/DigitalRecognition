@@ -25,6 +25,7 @@ InferResult InferResultAsync::operator()() {
         if (callable) {
             result = get();
             called = true;
+            callable = false;
             return result;
         } else {
             throw std::runtime_error("Call invalid InferResultAsync!");
@@ -35,7 +36,9 @@ InferResult InferResultAsync::operator()() {
 #ifdef OPENVINO
 InferResult InferResultAsync::get() {
     req.wait();
-    return ModelManager::postprocess(req.get_tensor(ModelManager::output_name));
+    InferResult res = ModelManager::postprocess(req.get_tensor(ModelManager::output_name));
+    req = ov::InferRequest();
+    return res;
 }
 #endif
 
