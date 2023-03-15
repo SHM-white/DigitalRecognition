@@ -22,7 +22,7 @@ std::function<void()> asyncFunctionCreator(int batch, cv::Mat& img) {
             futures[i] = modelManager.infer_async(img);
         }
         for (int i = 0; i < batch; i++) {
-            futures[i].get();
+            auto res = futures[i].get();
         }
         delete[] futures;
     };

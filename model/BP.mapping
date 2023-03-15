@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="onnx::Reshape_0" output_port_id="onnx::Reshape_0" />
+		<IR name="onnx::Reshape_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/Constant" output_port_id="/Constant_output_0" />
+		<IR name="/Constant" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="/Reshape" output_port_id="/Reshape_output_0" />
+		<IR name="/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="fc1.weight" output_port_id="fc1.weight" />
+		<IR name="fc1.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/fc1/Gemm" output_port_id="/fc1/Gemm_output_0" />
+		<IR name="/fc1/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="/Relu" output_port_id="/Relu_output_0" />
+		<IR name="/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="fc2.weight" output_port_id="fc2.weight" />
+		<IR name="fc2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/fc2/Gemm" output_port_id="/fc2/Gemm_output_0" />
+		<IR name="/fc2/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="10" output_port_id="10" />
+		<IR name="10" output_port_id="1" />
+	</map>
+</mapping>

@@ -17,7 +17,10 @@ private:
     friend class InferResultAsync;
 
 #ifdef MOBILE_NET
-    constexpr static const char* output_name = "873";
+    constexpr static const char* output_name = "874";
+#endif
+#ifdef BP
+    constexpr static const char* output_name = "10";
 #endif
 
     ov::Core core;
