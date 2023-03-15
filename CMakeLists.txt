@@ -3,9 +3,10 @@ project(DigitalRecognition)
 
 set(CMAKE_CXX_STANDARD 14)
 # 目前支持的识别方法：MobileNet, BP, Template
-set(RECOGNITION_METHOD "Template")
+if (NOT RECOGNITION_METHOD)
+    set(RECOGNITION_METHOD "Template")
+endif()
 set(BENCHMARK off)
-
 
 if(${RECOGNITION_METHOD} MATCHES "MobileNet")
     message(STATUS "Using RECOGNITION METHOD MobileNet")
