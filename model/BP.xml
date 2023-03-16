@@ -15,7 +15,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="1" name="Constant_1152_compressed" type="Const" version="opset1">
+		<layer id="1" name="Constant_1162_compressed" type="Const" version="opset1">
 			<data element_type="f16" shape="1, 1, 1, 1" offset="0" size="2" />
 			<output>
 				<port id="0" precision="FP16">
@@ -26,7 +26,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="2" name="Constant_1152" type="Convert" version="opset1">
+		<layer id="2" name="Constant_1162" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -48,7 +48,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="3" name="Subtract_29" type="Subtract" version="opset1">
+		<layer id="3" name="Subtract_38" type="Subtract" version="opset1">
 			<data auto_broadcast="numpy" />
 			<rt_info>
 				<attribute name="preprocessing" version="0" />
@@ -76,7 +76,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="4" name="Constant_1153_compressed" type="Const" version="opset1">
+		<layer id="4" name="Constant_1163_compressed" type="Const" version="opset1">
 			<data element_type="f16" shape="1, 1, 1, 1" offset="2" size="2" />
 			<output>
 				<port id="0" precision="FP16">
@@ -87,7 +87,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="5" name="Constant_1153" type="Convert" version="opset1">
+		<layer id="5" name="Constant_1163" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -109,7 +109,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="6" name="Divide_31" type="Multiply" version="opset1">
+		<layer id="6" name="Divide_40" type="Multiply" version="opset1">
 			<data auto_broadcast="numpy" />
 			<rt_info>
 				<attribute name="preprocessing" version="0" />
@@ -166,10 +166,10 @@
 			</output>
 		</layer>
 		<layer id="9" name="fc1.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="128, 1024" offset="20" size="262144" />
+			<data element_type="f16" shape="256, 1024" offset="20" size="524288" />
 			<output>
 				<port id="0" precision="FP16">
-					<dim>128</dim>
+					<dim>256</dim>
 					<dim>1024</dim>
 				</port>
 			</output>
@@ -181,13 +181,13 @@
 			</rt_info>
 			<input>
 				<port id="0" precision="FP16">
-					<dim>128</dim>
+					<dim>256</dim>
 					<dim>1024</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="fc1.weight">
-					<dim>128</dim>
+					<dim>256</dim>
 					<dim>1024</dim>
 				</port>
 			</output>
@@ -200,27 +200,27 @@
 					<dim>1024</dim>
 				</port>
 				<port id="1" precision="FP32">
-					<dim>128</dim>
+					<dim>256</dim>
 					<dim>1024</dim>
 				</port>
 			</input>
 			<output>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="12" name="Constant_1154_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 128" offset="262164" size="256" />
+		<layer id="12" name="Constant_1164_compressed" type="Const" version="opset1">
+			<data element_type="f16" shape="1, 256" offset="524308" size="512" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="13" name="Constant_1154" type="Convert" version="opset1">
+		<layer id="13" name="Constant_1164" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -228,13 +228,13 @@
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
@@ -243,17 +243,17 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</input>
 			<output>
 				<port id="2" precision="FP32" names="/fc1/Gemm_output_0">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
@@ -261,22 +261,22 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="/Relu_output_0">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="16" name="fc2.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="10, 128" offset="262420" size="2560" />
+			<data element_type="f16" shape="128, 256" offset="524820" size="65536" />
 			<output>
 				<port id="0" precision="FP16">
-					<dim>10</dim>
 					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
@@ -287,14 +287,14 @@
 			</rt_info>
 			<input>
 				<port id="0" precision="FP16">
-					<dim>10</dim>
 					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="fc2.weight">
-					<dim>10</dim>
 					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
@@ -303,30 +303,30 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 				<port id="1" precision="FP32">
-					<dim>10</dim>
 					<dim>128</dim>
+					<dim>256</dim>
 				</port>
 			</input>
 			<output>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="19" name="Constant_1155_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 10" offset="264980" size="20" />
+		<layer id="19" name="Constant_1165_compressed" type="Const" version="opset1">
+			<data element_type="f16" shape="1, 128" offset="590356" size="256" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="20" name="Constant_1155" type="Convert" version="opset1">
+		<layer id="20" name="Constant_1165" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -334,13 +334,13 @@
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>128</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
@@ -349,40 +349,146 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>128</dim>
 				</port>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>128</dim>
 				</port>
 			</input>
 			<output>
 				<port id="2" precision="FP32" names="/fc2/Gemm_output_0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="22" name="10" type="SoftMax" version="opset8">
+		<layer id="22" name="/Relu_1" type="ReLU" version="opset1">
+			<input>
+				<port id="0" precision="FP32">
+					<dim>1</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP32" names="/Relu_1_output_0">
+					<dim>1</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="23" name="fc3.weight_compressed" type="Const" version="opset1">
+			<data element_type="f16" shape="13, 128" offset="590612" size="3328" />
+			<output>
+				<port id="0" precision="FP16">
+					<dim>13</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="24" name="fc3.weight" type="Convert" version="opset1">
+			<data destination_type="f32" />
+			<rt_info>
+				<attribute name="decompression" version="0" />
+			</rt_info>
+			<input>
+				<port id="0" precision="FP16">
+					<dim>13</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP32" names="fc3.weight">
+					<dim>13</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="25" name="/fc3/Gemm/WithoutBiases" type="MatMul" version="opset1">
+			<data transpose_a="false" transpose_b="true" />
+			<input>
+				<port id="0" precision="FP32">
+					<dim>1</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1" precision="FP32">
+					<dim>13</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP32">
+					<dim>1</dim>
+					<dim>13</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="26" name="Constant_1166_compressed" type="Const" version="opset1">
+			<data element_type="f16" shape="1, 13" offset="593940" size="26" />
+			<output>
+				<port id="0" precision="FP16">
+					<dim>1</dim>
+					<dim>13</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="27" name="Constant_1166" type="Convert" version="opset1">
+			<data destination_type="f32" />
+			<rt_info>
+				<attribute name="decompression" version="0" />
+			</rt_info>
+			<input>
+				<port id="0" precision="FP16">
+					<dim>1</dim>
+					<dim>13</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP32">
+					<dim>1</dim>
+					<dim>13</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="28" name="/fc3/Gemm" type="Add" version="opset1">
+			<data auto_broadcast="numpy" />
+			<input>
+				<port id="0" precision="FP32">
+					<dim>1</dim>
+					<dim>13</dim>
+				</port>
+				<port id="1" precision="FP32">
+					<dim>1</dim>
+					<dim>13</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP32" names="/fc3/Gemm_output_0">
+					<dim>1</dim>
+					<dim>13</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="29" name="14" type="SoftMax" version="opset8">
 			<data axis="1" />
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>13</dim>
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP32" names="10">
+				<port id="1" precision="FP32" names="14">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>13</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="23" name="10/sink_port_0" type="Result" version="opset1">
+		<layer id="30" name="14/sink_port_0" type="Result" version="opset1">
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>13</dim>
 				</port>
 			</input>
 		</layer>
@@ -410,7 +516,14 @@
 		<edge from-layer="19" from-port="0" to-layer="20" to-port="0" />
 		<edge from-layer="20" from-port="1" to-layer="21" to-port="1" />
 		<edge from-layer="21" from-port="2" to-layer="22" to-port="0" />
-		<edge from-layer="22" from-port="1" to-layer="23" to-port="0" />
+		<edge from-layer="22" from-port="1" to-layer="25" to-port="0" />
+		<edge from-layer="23" from-port="0" to-layer="24" to-port="0" />
+		<edge from-layer="24" from-port="1" to-layer="25" to-port="1" />
+		<edge from-layer="25" from-port="2" to-layer="28" to-port="0" />
+		<edge from-layer="26" from-port="0" to-layer="27" to-port="0" />
+		<edge from-layer="27" from-port="1" to-layer="28" to-port="1" />
+		<edge from-layer="28" from-port="2" to-layer="29" to-port="0" />
+		<edge from-layer="29" from-port="1" to-layer="30" to-port="0" />
 	</edges>
 	<rt_info>
 		<MO_version value="2022.3.0-9052-9752fafe8eb-releases/2022/3" />

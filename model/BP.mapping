@@ -33,7 +33,19 @@
 		<IR name="/fc2/Gemm" output_port_id="2" />
 	</map>
 	<map>
-		<framework name="10" output_port_id="10" />
-		<IR name="10" output_port_id="1" />
+		<framework name="/Relu_1" output_port_id="/Relu_1_output_0" />
+		<IR name="/Relu_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="fc3.weight" output_port_id="fc3.weight" />
+		<IR name="fc3.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="/fc3/Gemm" output_port_id="/fc3/Gemm_output_0" />
+		<IR name="/fc3/Gemm" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="14" output_port_id="14" />
+		<IR name="14" output_port_id="1" />
 	</map>
 </mapping>
