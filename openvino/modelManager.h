@@ -20,7 +20,7 @@ private:
     constexpr static const char* output_name = "874";
 #endif
 #ifdef BP
-    constexpr static const char* output_name = "10";
+    constexpr static const char* output_name = "14";
 #endif
 
     ov::Core core;
@@ -32,7 +32,7 @@ private:
 public:
     void init();
     InferResult infer_sync(cv::Mat& img);
-    InferResultAsync infer_async(cv::Mat& img);
+    InferResultAsync infer_async(cv::Mat&& img);
 };
 
 
