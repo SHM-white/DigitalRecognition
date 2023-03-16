@@ -20,7 +20,7 @@ void ModelManager::init() {
 }
 
 InferResult ModelManager::infer_sync(cv::Mat &img) {
-    float lgt = 33.33333333333f;
+    float lgt = 100.f;
     if (img.channels() > 1) {
         cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);
     }
