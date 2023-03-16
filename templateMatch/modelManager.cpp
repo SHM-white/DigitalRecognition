@@ -19,11 +19,8 @@ void ModelManager::init() {
     }
 }
 
-InferResult ModelManager::infer_sync(cv::Mat &img) {
+InferResult ModelManager::infer_sync(cv::Mat &&img) {
     float lgt = 100.f;
-    if (img.channels() > 1) {
-        cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);
-    }
     cv::Mat img_res(img.rows, img.cols, CV_8UC1, cv::Scalar(0));
     cv::Mat img_mean = img(cv::Rect((int)(img.cols / 4.0), 0, (int)(img.cols / 2.0), img.rows));//remove LEDs
     cv::Mat img_gray = img * lgt / cv::mean(img_mean)[0];
@@ -54,8 +51,7 @@ InferResult ModelManager::infer_sync(cv::Mat &img) {
     return result;
 }
 
-InferResultAsync ModelManager::infer_async(cv::Mat &img) {
-    return InferResultAsync(std::async(std::launch::async, [&img, this]() {
-        return this->infer_sync(img);
-    }).share());
+InferResultAsync ModelManager::infer_async(cv::Mat &&img) {
+    return InferResultAsync(std::async(
+            std::launch::async, std::bind(&ModelManager::infer_sync, this, std::placeholders::_1), img).share());
 }
