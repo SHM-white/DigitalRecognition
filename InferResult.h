@@ -28,7 +28,7 @@ private:
 #endif
     using T = decltype(req);
     InferResult result{};
-    bool callable = false, called = true, set = false;
+    bool callable = false, called = false, set = false;
 public:
     InferResultAsync() = default;
     InferResultAsync(const InferResultAsync& other) = default;
