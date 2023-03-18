@@ -13,7 +13,23 @@ InferResult ModelManager::postprocess(float *res) {
     return {};
 }
 
+void ModelManager::preprocess(cv::Mat &img, int idx, cudaStream_t stream) {
+    if(img.channels() > 1) {
+        cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);
+    }
+    if (img.rows != 32 || img.cols != 32) {
+        cv::resize(img, img, cv::Size(32, 32));
+    }
+    if (img.type() != INPUT_MAT_TYPE) {
+        img.convertTo(img, INPUT_MAT_TYPE);
+    }
+    memcpy(input_p[idx], img.data, input_size * sizeof(INPUT_VAR_TYPE));
+    CHECK(cuMemPrefetchAsync((CUdeviceptr)input_p[idx], input_size * sizeof(INPUT_VAR_TYPE), device, stream));
+    cuda_preprocess(input_p[idx], preprocess_p[idx], input_size, stream);
+}
+
 void ModelManager::init() {
+    cudaGetDevice(&device);
     char* trtModelStream{nullptr};
     size_t size{0};
     std::ifstream file(MODEL_PATH, std::ios::binary);

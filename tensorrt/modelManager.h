@@ -14,8 +14,6 @@
 #include "../InferResult.h"
 #include "preprocess.h"
 
-#define INPUT_MAT_TYPE CV_16UC1
-#define INPUT_VAR_TYPE uint16_t
 
 #define CHECK(status) \
     do\
@@ -49,11 +47,13 @@ private:
     constexpr static int output_size = 13;
     constexpr static int input_size = 32 * 32;
 
+    static CUdevice device;
     static nvinfer1::IRuntime* runtime;
     static nvinfer1::ICudaEngine* engine;
     static std::deque<nvinfer1::IExecutionContext*> context_p;
 
     static InferResult postprocess(float* res);
+    static void preprocess(cv::Mat& img, int idx, cudaStream_t stream);
     static void appendCache();
 
 public:

@@ -5,4 +5,13 @@
 #ifndef DIGITALRECOGNITION_PREPROCESS_H
 #define DIGITALRECOGNITION_PREPROCESS_H
 
+#include <cuda_runtime_api.h>
+
+#define INPUT_MAT_TYPE CV_16UC1
+#define INPUT_VAR_TYPE unsigned short
+#define MEAN 52
+#define SCALE 25
+
+void cuda_preprocess(INPUT_VAR_TYPE* input, float* output, int size, cudaStream_t stream);
+
 #endif //DIGITALRECOGNITION_PREPROCESS_H
