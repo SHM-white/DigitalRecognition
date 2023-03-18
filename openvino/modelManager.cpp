@@ -3,6 +3,8 @@
 //
 
 #include "modelManager.h"
+#include "../tensorrt/modelManager.h"
+
 
 #include <cstring>
 

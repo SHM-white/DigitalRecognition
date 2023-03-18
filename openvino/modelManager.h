@@ -6,7 +6,6 @@
 #define DIGITALRECOGNITION_MODELMANAGER_H
 
 #include <openvino/openvino.hpp>
-#include <boost/serialization/singleton.hpp>
 #include <opencv2/opencv.hpp>
 #include <cstdint>
 #include "../InferResult.h"
@@ -20,7 +19,7 @@ private:
     constexpr static const char* output_name = "874";
 #endif
 #ifdef BP
-    constexpr static const char* output_name = "10";
+    constexpr static const char* output_name = "14";
 #endif
 
     ov::Core core;

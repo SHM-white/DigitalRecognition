@@ -61,6 +61,14 @@ InferResult InferResultAsync::get() {
 }
 #endif
 
+#ifdef TENSORRT
+InferResult InferResultAsync::get() {
+    auto res = req->get();
+    req.reset();
+    return res;
+}
+#endif
+
 #ifdef TEMPLATE
 InferResult InferResultAsync::get() {
     try {

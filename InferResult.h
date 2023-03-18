@@ -8,6 +8,9 @@
 #ifdef OPENVINO
 #include <openvino/openvino.hpp>
 #endif
+#ifdef TENSORRT
+#include "tensorrt/inferRequest.h"
+#endif
 #ifdef TEMPLATE
 #include <future>
 #endif
@@ -22,6 +25,9 @@ class InferResultAsync {
 private:
 #ifdef OPENVINO
     ov::InferRequest req;
+#endif
+#ifdef TENSORRT
+    InferRequestPtr req;
 #endif
 #ifdef TEMPLATE
     std::shared_future<InferResult> req;
