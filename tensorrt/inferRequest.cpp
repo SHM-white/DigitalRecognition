@@ -6,20 +6,21 @@
 #include "../InferResult.h"
 #include "modelManager.h"
 
-InferRequest::InferRequest(cudaStream_t _stream, int _idx) {
+InferRequest::InferRequest(cudaStream_t _stream, int _idx, ModelManager* _mm) {
     idx = _idx;
-    ModelManager::memoryUsing[_idx] = true;
+    mm = _mm;
+    _mm->memoryUsing[_idx] = true;
     stream = _stream;
-    output = ModelManager::output_p[_idx];
+    output = _mm->binding_p[_idx].data[1];
 }
 
 InferRequest::~InferRequest() {
     if (output != nullptr) {
         output = nullptr;
-        ModelManager::memoryUsing[idx] = false;
+        mm->memoryUsing[idx] = false;
     }
     if (stream != nullptr) {
-        cudaStreamDestroy(stream);
+        CHECK(cudaStreamDestroy(stream));
         stream = nullptr;
     }
 }
@@ -28,7 +29,7 @@ InferResult InferRequest::get() {
     if (stream == nullptr || output == nullptr) {
         return {0, false, 0};
     }
-    cudaStreamSynchronize(stream);
+    CHECK(cudaStreamSynchronize(stream));
     return ModelManager::postprocess(output);
 }
 

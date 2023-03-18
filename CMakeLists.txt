@@ -30,15 +30,17 @@ function(define_tensorrt modelName)
     option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
     find_package(CUDA REQUIRED)
 
+    set(CMAKE_CUDA_ARCHITECTURES native)
+
     if (CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
         message("embed_platform on")
+        add_definitions(-DJETSON)
         include_directories(/usr/local/cuda/targets/aarch64-linux/include)
         link_directories(/usr/local/cuda/targets/aarch64-linux/lib)
     else ()
         message("embed_platform off")
         # cuda
-        include_directories(/opt/cuda/include)
-        link_directories(/opt/cuda/lib64)
+        include_directories(${CUDA_INCLUDE_DIRS})
         include_directories(/usr/local/cuda/include)
         link_directories(/usr/local/cuda/lib64)
 
@@ -47,8 +49,9 @@ function(define_tensorrt modelName)
         link_directories(/home/nvidia/TensorRT-8.2.5.1/lib)
     endif ()
 
-    set(SOURCE_FILES tensorrt/modelManager.cpp tensorrt/inferRequest.cpp tensorrt/preprocess.cu PARENT_SCOPE)
-    set(LINK_LIBRARIES nvinfer nvparsers nvonnxparser cudart PARENT_SCOPE)
+    cuda_add_library(cupp STATIC tensorrt/preprocess.cu)
+    set(SOURCE_FILES tensorrt/modelManager.cpp tensorrt/inferRequest.cpp PARENT_SCOPE)
+    set(LINK_LIBRARIES nvinfer ${CUDA_LIBRARIES} cupp PARENT_SCOPE)
 endfunction(define_tensorrt)
 
 if(${RECOGNITION_METHOD} MATCHES "MobileNet")

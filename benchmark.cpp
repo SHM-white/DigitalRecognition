@@ -34,7 +34,7 @@ int main() {
     modelManager.init();
     InferResult res{};
 
-    auto bench = ankerl::nanobench::Bench().minEpochIterations(100).timeUnit(1us, "us").warmup(20);
+    auto bench = ankerl::nanobench::Bench().batch(1).minEpochIterations(100).timeUnit(1us, "us");
     bench.run("Sync", [&res, &img] {
         res = modelManager.infer_sync(img);
     });

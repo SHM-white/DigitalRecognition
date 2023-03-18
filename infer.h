@@ -10,6 +10,9 @@
 #ifdef OPENVINO
 #include "openvino/modelManager.h"
 #endif
+#ifdef TENSORRT
+#include "tensorrt/modelManager.h"
+#endif
 #ifdef TEMPLATE
 #include "templateMatch/modelManager.h"
 #endif

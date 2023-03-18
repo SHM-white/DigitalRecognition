@@ -5,6 +5,8 @@
 #ifndef DIGITALRECOGNITION_MODELMANAGER_H
 #define DIGITALRECOGNITION_MODELMANAGER_H
 
+#define INIT_CACHE_SIZE 10
+
 #include <cstdint>
 #include <atomic>
 #include <deque>
@@ -39,25 +41,30 @@ private:
     constexpr static const char* output_name = "14";
 #endif
 
-    static std::deque<std::atomic<bool>> memoryUsing;
-    static std::deque<INPUT_VAR_TYPE*> input_p;
-    static std::deque<float*> preprocess_p;
-    static std::deque<float*> output_p;
+    struct binding {
+        float* data[2];
+    };
+
+    std::deque<std::atomic<bool>> memoryUsing;
+    std::deque<INPUT_VAR_TYPE*> input_p;
+    std::deque<binding> binding_p;
 
     constexpr static int output_size = 13;
     constexpr static int input_size = 32 * 32;
 
-    static CUdevice device;
-    static nvinfer1::IRuntime* runtime;
-    static nvinfer1::ICudaEngine* engine;
-    static std::deque<nvinfer1::IExecutionContext*> context_p;
+    CUdevice device;
+    nvinfer1::IRuntime* runtime{nullptr};
+    nvinfer1::ICudaEngine* engine{nullptr};
+    std::deque<nvinfer1::IExecutionContext*> context_p;
 
-    static InferResult postprocess(float* res);
-    static void preprocess(cv::Mat& img, int idx, cudaStream_t stream);
-    static void appendCache();
+    static InferResult postprocess(const float* res);
+    void preprocess(cv::Mat& img, int idx, cudaStream_t stream);
+    void scaleMemoryPoll(int size=INIT_CACHE_SIZE);
+    int getMemorySlot();
 
 public:
-    static void init();
+    void init();
+    ~ModelManager();
     InferResult infer_sync(cv::Mat& img);
     InferResultAsync infer_async(cv::Mat& img);
 };
