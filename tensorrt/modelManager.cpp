@@ -120,6 +120,10 @@ InferResultAsync ModelManager::infer_async(cv::Mat& img) {
     return InferResultAsync(std::move(ir));
 }
 
+InferResultAsync ModelManager::infer_async(cv::Mat&& img) {
+    return infer_async(img);
+}
+
 int ModelManager::getMemorySlot() {
     int size = (int)memoryUsing.size();
     for (int i = 0; i < size; i++) {

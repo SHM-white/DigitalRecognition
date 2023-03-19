@@ -57,6 +57,7 @@ public:
     void init();
     ~ModelManager();
     InferResult infer_sync(cv::Mat& img);
+    InferResultAsync infer_async(cv::Mat&& img);
     InferResultAsync infer_async(cv::Mat& img);
 };
 

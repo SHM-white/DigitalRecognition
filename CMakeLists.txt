@@ -10,10 +10,9 @@ endif()
 if (NOT NN_BACKEND)
     set(NN_BACKEND "auto")
 endif()
-set(BENCHMARK on)
+set(BENCHMARK off)
 
-# 如果必须修改此路径才能编译，修改后请不要推送至git
-set(OpenVINO_DIR /opt/intel/openvino/runtime/cmake)
+include(path.cmake)
 
 if (${NN_BACKEND} MATCHES "auto")
     find_package(OpenVINO)
@@ -55,12 +54,12 @@ function(define_tensorrt modelName)
         message("embed_platform off")
         # cuda
         include_directories(${CUDA_INCLUDE_DIRS})
-        include_directories(/usr/local/cuda/include)
-        link_directories(/usr/local/cuda/lib64)
+        include_directories(${CUDA_}/include)
+        link_directories(${CUDA_}/lib64)
 
-        # tensorrt, 在本地修改本路径后请不要提交到git
-        include_directories(/home/nvidia/TensorRT-8.2.5.1/include)
-        link_directories(/home/nvidia/TensorRT-8.2.5.1/lib)
+        # tensorrt
+        include_directories(${TensorRT_DIR_}/include)
+        link_directories(${TensorRT_DIR_}/lib)
     endif ()
 
     cuda_add_library(cupp STATIC tensorrt/preprocess.cu)
@@ -90,9 +89,8 @@ elseif(RECOGNITION_METHOD MATCHES "BP")
     endif()
 elseif(RECOGNITION_METHOD MATCHES "Template")
     message(STATUS "Using RECOGNITION METHOD Template")
-    add_definitions(-DTEMPLATES_PATH="${PROJECT_SOURCE_DIR}/templateMatch/templates/")
     add_definitions(-DTEMPLATE)
-
+    add_definitions(-DTEMPLATES_PATH="${PROJECT_SOURCE_DIR}/templateMatch/templates/")
     set(SOURCE_FILES templateMatch/modelManager.cpp)
 else()
     message(FATAL_ERROR "Not Define RECOGNITION METHOD")

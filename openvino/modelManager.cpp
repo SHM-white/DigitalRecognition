@@ -65,7 +65,7 @@ InferResult ModelManager::infer_sync(cv::Mat &img) {
     return postprocess(output);
 }
 
-InferResultAsync ModelManager::infer_async(cv::Mat &&img) {
+InferResultAsync ModelManager::infer_async(cv::Mat &img) {
     auto input_tensor = preprocess(img);
     ov::InferRequest infer_request = model.create_infer_request();
     infer_request.set_input_tensor(input_tensor);

@@ -15,8 +15,8 @@ private:
 
 public:
     void init();
-    InferResult infer_sync(cv::Mat&& img);
-    InferResultAsync infer_async(cv::Mat&& img);
+    InferResult infer_sync(cv::Mat& img);
+    InferResultAsync infer_async(cv::Mat& img);
 };
 
 
