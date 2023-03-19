@@ -9,8 +9,8 @@
 
 #define INPUT_MAT_TYPE CV_16UC1
 #define INPUT_VAR_TYPE unsigned short
-#define MEAN 116.28
-#define SCALE 57.12
+#define MEAN 116.28f
+#define SCALE 57.12f
 
 void cuda_preprocess(INPUT_VAR_TYPE* input, float* output, int size, cudaStream_t stream);
 

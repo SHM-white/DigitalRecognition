@@ -37,8 +37,8 @@ void ModelManager::preprocess(cv::Mat &img, int idx, cudaStream_t stream) {
     if(img.channels() > 1) {
         cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);
     }
-    if (img.rows != 32 || img.cols != 32) {
-        cv::resize(img, img, cv::Size(32, 32));
+    if (img.rows != height || img.cols != width) {
+        cv::resize(img, img, cv::Size(width, height));
     }
     if (img.type() != INPUT_MAT_TYPE) {
         img.convertTo(img, INPUT_MAT_TYPE);
@@ -76,7 +76,7 @@ void ModelManager::scaleMemoryPoll(int size) {
     for (int i = 0; i < size; i++) {
         memoryUsing.emplace_back(false);
         INPUT_VAR_TYPE* input_;
-        CHECK(cudaMallocManaged((void**)&input_, 32 * 32 * sizeof(INPUT_VAR_TYPE)));
+        CHECK(cudaMallocManaged((void**)&input_, input_size * sizeof(INPUT_VAR_TYPE)));
         input_p.push_back(input_);
         float* preprocess_;
         CHECK(cudaMallocManaged((void**)&preprocess_, input_size * sizeof(float)));

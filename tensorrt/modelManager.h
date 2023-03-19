@@ -14,6 +14,7 @@
 #include <opencv2/opencv.hpp>
 
 #include "../InferResult.h"
+#include "../common.h"
 #include "preprocess.h"
 
 
@@ -34,13 +35,6 @@ private:
     friend class InferResultAsync;
     friend class InferRequest;
 
-#ifdef MOBILE_NET
-    constexpr static const char* output_name = "874";
-#endif
-#ifdef BP
-    constexpr static const char* output_name = "14";
-#endif
-
     struct binding {
         float* data[2];
     };
@@ -48,9 +42,6 @@ private:
     std::deque<std::atomic<bool>> memoryUsing;
     std::deque<INPUT_VAR_TYPE*> input_p;
     std::deque<binding> binding_p;
-
-    constexpr static int output_size = 13;
-    constexpr static int input_size = 32 * 32;
 
     CUdevice device;
     nvinfer1::IRuntime* runtime{nullptr};

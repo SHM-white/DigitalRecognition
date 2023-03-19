@@ -33,8 +33,8 @@ ov::Tensor ModelManager::preprocess(cv::Mat &img) {
     if(img.channels() > 1) {
         cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);
     }
-    if (img.rows != 32 || img.cols != 32) {
-        cv::resize(img, img, cv::Size(32, 32));
+    if (img.rows != height || img.cols != width) {
+        cv::resize(img, img, cv::Size(width, height));
     }
     if (img.type() != CV_32FC1) {
         img.convertTo(img, CV_32FC1);

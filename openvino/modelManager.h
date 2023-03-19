@@ -9,18 +9,12 @@
 #include <opencv2/opencv.hpp>
 #include <cstdint>
 #include "../InferResult.h"
+#include "../common.h"
 
 
 class ModelManager {
 private:
     friend class InferResultAsync;
-
-#ifdef MOBILE_NET
-    constexpr static const char* output_name = "874";
-#endif
-#ifdef BP
-    constexpr static const char* output_name = "14";
-#endif
 
     ov::Core core;
     ov::CompiledModel model;
