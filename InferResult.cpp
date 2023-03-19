@@ -55,7 +55,7 @@ void InferResultAsync::setMarkerType(bool type) {
 #ifdef OPENVINO
 InferResult InferResultAsync::get() {
     req.wait();
-    InferResult res = ModelManager::postprocess(req.get_tensor(ModelManager::output_name));
+    InferResult res = ModelManager::postprocess(req.get_tensor(output_name));
     req = ov::InferRequest();
     return res;
 }

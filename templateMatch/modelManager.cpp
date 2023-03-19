@@ -19,6 +19,10 @@ void ModelManager::init() {
     }
 }
 
+InferResult ModelManager::_infer_sync(cv::Mat &&img) {
+    infer_sync(img);
+}
+
 InferResult ModelManager::infer_sync(cv::Mat &img) {
     float lgt = 100.f;
     cv::Mat img_res(img.rows, img.cols, CV_8UC1, cv::Scalar(0));
@@ -52,6 +56,9 @@ InferResult ModelManager::infer_sync(cv::Mat &img) {
 }
 
 InferResultAsync ModelManager::infer_async(cv::Mat &img) {
+    cv::Mat _img = img.clone();
     return InferResultAsync(std::async(
-            std::launch::async, std::bind(&ModelManager::infer_sync, this, std::placeholders::_1), img).share());
+            std::launch::async,
+            std::bind(&ModelManager::_infer_sync, this, std::placeholders::_1),
+            std::move(_img)).share());
 }
