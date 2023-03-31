@@ -15,7 +15,7 @@ InferResult datasetId2InferResult[] = {
         {4, true, 1},
         {5, false, 1},
         {5, true, 1},
-        {6, true, 1},
+        {6, false, 1},
         {7, false, 1},
         {8, false, 1},
         {8, true, 1},
