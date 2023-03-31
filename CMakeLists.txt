@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(DigitalRecognition)
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_BUILD_TYPE Release)
 # 目前支持的识别方法：MobileNet, BP, Template
 if (NOT RECOGNITION_METHOD)
     set(RECOGNITION_METHOD "MobileNet")
