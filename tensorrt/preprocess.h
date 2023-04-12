@@ -7,8 +7,8 @@
 
 #include <cuda_runtime_api.h>
 
-#define INPUT_MAT_TYPE CV_16UC1
-#define INPUT_VAR_TYPE unsigned short
+#define INPUT_MAT_TYPE CV_8UC1
+#define INPUT_VAR_TYPE unsigned char
 #define MEAN 116.28f
 #define SCALE 57.12f
 
