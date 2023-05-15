@@ -5,19 +5,30 @@
 #ifndef DIGITALRECOGNITION_MODELMANAGER_H
 #define DIGITALRECOGNITION_MODELMANAGER_H
 
+#define INIT_CACHE_SIZE 10
+
 #include <openvino/openvino.hpp>
 #include <opencv2/opencv.hpp>
 #include <cstdint>
-#include "../InferResult.h"
 #include "../common.h"
 
+class InferRequest;
+class InferResult;
+class InferResultAsync;
 
 class ModelManager {
 private:
     friend class InferResultAsync;
+    friend class InferRequest;
 
     ov::Core core;
-    ov::CompiledModel model;
+
+    std::deque<ov::InferRequest> requests;
+    std::deque<ov::CompiledModel> models;
+    std::deque<std::atomic<bool>> requestUsing;
+
+    void scaleRequestPoll(int size=INIT_CACHE_SIZE);
+    int getRequestSlot();
 
     ov::Tensor preprocess(cv::Mat& img);
     static InferResult postprocess(const ov::Tensor& res);

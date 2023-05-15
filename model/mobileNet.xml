@@ -10065,7 +10065,7 @@
 			</output>
 		</layer>
 		<layer id="560" name="Constant_10316_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576" offset="2163042" size="1152" />
+			<data element_type="f16" shape="1, 576" offset="1021570" size="1152" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -10239,7 +10239,7 @@
 			</output>
 		</layer>
 		<layer id="571" name="Constant_10111_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="2164194" size="1152" />
+			<data element_type="f16" shape="1, 576, 1, 1" offset="2163042" size="1152" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -10297,7 +10297,7 @@
 			</output>
 		</layer>
 		<layer id="574" name="Constant_10176_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="2165346" size="1152" />
+			<data element_type="f16" shape="1, 576, 1, 1" offset="2164194" size="1152" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -10552,7 +10552,7 @@
 			</output>
 		</layer>
 		<layer id="587" name="out_conv2.0.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1280, 576, 1, 1" offset="2166498" size="1474560" />
+			<data element_type="f16" shape="1280, 576, 1, 1" offset="2165346" size="1474560" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1280</dim>
@@ -10610,7 +10610,7 @@
 			</output>
 		</layer>
 		<layer id="590" name="Reshape_3197_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 1280, 1, 1" offset="3641058" size="2560" />
+			<data element_type="f16" shape="1, 1280, 1, 1" offset="3639906" size="2560" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -10846,7 +10846,7 @@
 			</output>
 		</layer>
 		<layer id="602" name="out_conv2.3.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="13, 1280, 1, 1" offset="3643618" size="33280" />
+			<data element_type="f16" shape="13, 1280, 1, 1" offset="3642466" size="33280" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>13</dim>
@@ -10904,7 +10904,7 @@
 			</output>
 		</layer>
 		<layer id="605" name="Reshape_3255_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 13, 1, 1" offset="3676898" size="26" />
+			<data element_type="f16" shape="1, 13, 1, 1" offset="3675746" size="26" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -10962,7 +10962,7 @@
 			</output>
 		</layer>
 		<layer id="608" name="/Constant_1" type="Const" version="opset1">
-			<data element_type="i64" shape="2" offset="3676924" size="16" />
+			<data element_type="i64" shape="2" offset="3675772" size="16" />
 			<output>
 				<port id="0" precision="I64" names="/Constant_1_output_0">
 					<dim>2</dim>
@@ -11661,9 +11661,9 @@
 		<conversion_parameters>
 			<compress_to_fp16 value="True" />
 			<framework value="onnx" />
-			<input_model value="DIR/mobileNet.onnx" />
+			<input_model value="DIR/MB0505.onnx" />
 			<mean_values value="[116.28]" />
-			<model_name value="mobileNet" />
+			<model_name value="MB0505" />
 			<scale value="57.12" />
 			<static_shape value="True" />
 		</conversion_parameters>

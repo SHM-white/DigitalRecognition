@@ -133,6 +133,7 @@ int ModelManager::getMemorySlot() {
         }
     }
     scaleMemoryPoll();
+    memoryUsing[size] = true;
     return size;
 }
 
