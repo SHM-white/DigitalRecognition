@@ -70,6 +70,18 @@ InferResult InferResultAsync::get() {
 }
 #endif
 
+#ifdef RKNN
+InferResult InferResultAsync::get() {
+    try {
+        return req.get();
+    }
+    catch (std::exception &e) {
+        std::cerr << "Task exception: " << e.what() << std::endl;
+        return InferResult{0, false, 0};
+    }
+}
+#endif
+
 #ifdef TEMPLATE
 InferResult InferResultAsync::get() {
     try {

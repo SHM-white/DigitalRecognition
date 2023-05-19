@@ -11,6 +11,10 @@
 #ifdef TENSORRT
 #include "tensorrt/inferRequest.h"
 #endif
+#ifdef RKNN
+#include "rknn_api.h"
+#include <future>
+#endif
 #ifdef TEMPLATE
 #include <future>
 #endif
@@ -28,6 +32,9 @@ private:
 #endif
 #ifdef TENSORRT
     InferRequestPtr req;
+#endif
+#ifdef RKNN
+    std::shared_future<InferResult> req;
 #endif
 #ifdef TEMPLATE
     std::shared_future<InferResult> req;
