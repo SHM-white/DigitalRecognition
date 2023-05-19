@@ -61,6 +61,9 @@ void ModelManager::init() {
             printf("rknn input set fail!\n");
         }
     }
+    rknn_set_core_mask(ctx[0], RKNN_NPU_CORE_0);
+    rknn_set_core_mask(ctx[1], RKNN_NPU_CORE_1);
+    rknn_set_core_mask(ctx[2], RKNN_NPU_CORE_2);
 }
 
 void ModelManager::preprocess(cv::Mat &img, int idx) {
