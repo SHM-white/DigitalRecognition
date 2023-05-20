@@ -10,6 +10,7 @@
 #include <openvino/openvino.hpp>
 #include <opencv2/opencv.hpp>
 #include <cstdint>
+#include <mutex>
 #include "../common.h"
 
 class InferRequest;
@@ -22,15 +23,9 @@ private:
     friend class InferRequest;
 
     ov::Core core;
+    ov::CompiledModel model;
 
-    std::deque<ov::InferRequest> requests;
-    std::deque<ov::CompiledModel> models;
-    std::deque<std::atomic<bool>> requestUsing;
-
-    void scaleRequestPoll(int size=INIT_CACHE_SIZE);
-    int getRequestSlot();
-
-    ov::Tensor preprocess(cv::Mat& img);
+    void preprocess(cv::Mat& img, ov::InferRequest& req);
     static InferResult postprocess(const ov::Tensor& res);
 
 public:

@@ -11,6 +11,7 @@
 #include <opencv2/opencv.hpp>
 #include <cstdint>
 #include <mutex>
+#include <atomic>
 #include "../common.h"
 
 class InferResult;

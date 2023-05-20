@@ -6,7 +6,7 @@
 #define DIGITALRECOGNITION_INFERRESULT_H
 
 #ifdef OPENVINO
-#include "openvino/inferRequest.h"
+#include "openvino/openvino.hpp"
 #endif
 #ifdef TENSORRT
 #include "tensorrt/inferRequest.h"
@@ -28,7 +28,7 @@ struct InferResult {
 class InferResultAsync {
 private:
 #ifdef OPENVINO
-    InferRequest req;
+    ov::InferRequest req;
 #endif
 #ifdef TENSORRT
     InferRequestPtr req;
