@@ -7,7 +7,11 @@
     && sudo apt update \
     && sudo apt install gh -y
     ```
-2. 执行`gh auth login`登陆github
-3. 在model目录下执行`update_model.sh`更新model
-4. 如果你需要使用tensorrt后端，请使用train分支下的转换工具自行转换
-5. 开始运行
+2. 建议挂上梯子，使用指令即可，注意该指令只对当前终端生效，重启终端失效，7890为clash的默认代理端口号，按需修改
+    ```shell
+    export http_proxy="http://127.0.0.1:7890"
+    ```
+3. 执行`gh auth login`登陆github
+4. 在model目录下执行`update_model.sh`更新model
+5. 如果你需要使用tensorrt后端，请使用train分支下的转换工具自行转换
+6. 开始运行
