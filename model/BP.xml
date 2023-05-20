@@ -378,10 +378,10 @@
 			</output>
 		</layer>
 		<layer id="23" name="fc3.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="13, 128" offset="590612" size="3328" />
+			<data element_type="f16" shape="9, 128" offset="590612" size="2304" />
 			<output>
 				<port id="0" precision="FP16">
-					<dim>13</dim>
+					<dim>9</dim>
 					<dim>128</dim>
 				</port>
 			</output>
@@ -393,13 +393,13 @@
 			</rt_info>
 			<input>
 				<port id="0" precision="FP16">
-					<dim>13</dim>
+					<dim>9</dim>
 					<dim>128</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="fc3.weight">
-					<dim>13</dim>
+					<dim>9</dim>
 					<dim>128</dim>
 				</port>
 			</output>
@@ -412,23 +412,23 @@
 					<dim>128</dim>
 				</port>
 				<port id="1" precision="FP32">
-					<dim>13</dim>
+					<dim>9</dim>
 					<dim>128</dim>
 				</port>
 			</input>
 			<output>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="26" name="Constant_1166_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 13" offset="593940" size="26" />
+			<data element_type="f16" shape="1, 9" offset="592916" size="18" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</output>
 		</layer>
@@ -440,13 +440,13 @@
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</output>
 		</layer>
@@ -455,17 +455,17 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</input>
 			<output>
 				<port id="2" precision="FP32" names="/fc3/Gemm_output_0">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</output>
 		</layer>
@@ -474,13 +474,13 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="14">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</output>
 		</layer>
@@ -488,7 +488,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>13</dim>
+					<dim>9</dim>
 				</port>
 			</input>
 		</layer>
