@@ -15,8 +15,11 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="1" name="Constant_1162_compressed" type="Const" version="opset1">
+		<layer id="1" name="Constant_1101_compressed" type="Const" version="opset1">
 			<data element_type="f16" shape="1, 1, 1, 1" offset="0" size="2" />
+			<rt_info>
+				<attribute name="preprocessing" version="0" />
+			</rt_info>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -26,10 +29,11 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="2" name="Constant_1162" type="Convert" version="opset1">
+		<layer id="2" name="Constant_1101" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
+				<attribute name="preprocessing" version="0" />
 			</rt_info>
 			<input>
 				<port id="0" precision="FP16">
@@ -48,11 +52,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="3" name="Subtract_38" type="Subtract" version="opset1">
+		<layer id="3" name="Multiply_1088" type="Multiply" version="opset1">
 			<data auto_broadcast="numpy" />
-			<rt_info>
-				<attribute name="preprocessing" version="0" />
-			</rt_info>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -76,7 +77,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="4" name="Constant_1163_compressed" type="Const" version="opset1">
+		<layer id="4" name="Constant_1102_compressed" type="Const" version="opset1">
 			<data element_type="f16" shape="1, 1, 1, 1" offset="2" size="2" />
 			<output>
 				<port id="0" precision="FP16">
@@ -87,7 +88,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="5" name="Constant_1163" type="Convert" version="opset1">
+		<layer id="5" name="Constant_1102" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -109,11 +110,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="6" name="Divide_40" type="Multiply" version="opset1">
+		<layer id="6" name="Divide_38" type="Add" version="opset1">
 			<data auto_broadcast="numpy" />
-			<rt_info>
-				<attribute name="preprocessing" version="0" />
-			</rt_info>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -211,7 +209,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="12" name="Constant_1164_compressed" type="Const" version="opset1">
+		<layer id="12" name="Constant_1103_compressed" type="Const" version="opset1">
 			<data element_type="f16" shape="1, 256" offset="524308" size="512" />
 			<output>
 				<port id="0" precision="FP16">
@@ -220,7 +218,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="13" name="Constant_1164" type="Convert" version="opset1">
+		<layer id="13" name="Constant_1103" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -317,7 +315,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="19" name="Constant_1165_compressed" type="Const" version="opset1">
+		<layer id="19" name="Constant_1104_compressed" type="Const" version="opset1">
 			<data element_type="f16" shape="1, 128" offset="590356" size="256" />
 			<output>
 				<port id="0" precision="FP16">
@@ -326,7 +324,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="20" name="Constant_1165" type="Convert" version="opset1">
+		<layer id="20" name="Constant_1104" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -423,7 +421,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="26" name="Constant_1166_compressed" type="Const" version="opset1">
+		<layer id="26" name="Constant_1105_compressed" type="Const" version="opset1">
 			<data element_type="f16" shape="1, 9" offset="592916" size="18" />
 			<output>
 				<port id="0" precision="FP16">
@@ -432,7 +430,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="27" name="Constant_1166" type="Convert" version="opset1">
+		<layer id="27" name="Constant_1105" type="Convert" version="opset1">
 			<data destination_type="f32" />
 			<rt_info>
 				<attribute name="decompression" version="0" />
@@ -526,14 +524,13 @@
 		<edge from-layer="29" from-port="1" to-layer="30" to-port="0" />
 	</edges>
 	<rt_info>
-		<MO_version value="2022.3.0-9052-9752fafe8eb-releases/2022/3" />
-		<Runtime_version value="2022.3.0-9052-9752fafe8eb-releases/2022/3" />
+		<MO_version value="2023.0.0-10926-b4452d56304-releases/2023/0" />
+		<Runtime_version value="2023.0.0-10926-b4452d56304-releases/2023/0" />
 		<conversion_parameters>
 			<compress_to_fp16 value="True" />
-			<framework value="onnx" />
 			<input_model value="DIR/BP.onnx" />
+			<is_python_api_used value="False" />
 			<mean_values value="[116.28]" />
-			<model_name value="BP" />
 			<scale value="57.12" />
 			<static_shape value="True" />
 		</conversion_parameters>
